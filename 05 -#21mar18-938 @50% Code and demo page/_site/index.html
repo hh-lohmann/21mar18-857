@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      HTML: Arranging Images in Horizontally Scrollable Rows
+    </title>
+    <style>
+      
+    </style>
+  </head>
+  <body
+    style="
+      margin: auto auto 80% auto ;
+      max-width: 40em ;
+    "
+  >
+    <h1>
+      HTML: Arranging Images in Horizontally Scrollable Rows
+    </h1>
+       <p>
+  See browser's Code Inspector for details.
+</p>
+
+
+
+  
+  
+    <section>
+     
+<h2
+  style="
+    border-bottom: thin solid ;
+    margin-top: 4em ;
+  "
+>
+  Single Image With Caption
+</h2>
+     
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    At first only one image to demonstrate the basic complex of image and caption
+  </p>
+
+
+
+    
+
+  
+  
+    <section>
+     
+<h3
+  style="
+    border-bottom: thin solid ;
+    margin-top: 3em ;
+  "
+>
+  With HTML <samp>figure</samp>
+</h3>
+     
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    <samp>figure</samp> would be straighforward since it semantically clear encapsulates an image with a caption (<samp>figcaption</samp>). Unfortunatly there were cases where it didn't work with <samp>overflow</samp> tweaking (see below).
+  </p>
+
+
+
+    
+
+  <figure
+  style="
+    
+  text-align: center ;
+
+
+
+  "
+>
+  <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+  <figcaption>
+    Fig. 1
+  </figcaption>
+</figure>
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Styling is necessary to align the caption midth under the image.
+  </p>
+
+
+<p>
+  Used styles:
+  <samp>
+    figure {
+      
+  text-align: center ;
+
+
+
+    }
+  </samp>
+</p>
+
+    </section>
+  
+    <section>
+     
+<h3
+  style="
+    border-bottom: thin solid ;
+    margin-top: 3em ;
+  "
+>
+  With HTML <samp>div</samp>
+</h3>
+     
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    <samp>div</samp> is always suboptimal due to its lack of semantic and suits as a last resort only. With it there is also no semantically clear element for the image caption, the least complicated choice is <samp>p</samp> for containing a text block. Semantic roles should be expressed by classes (with class names that are not reflecting styling details).
+  </p>
+
+
+
+    
+
+  <div
+  style="
+    
+  text-align: center ;
+
+
+
+  "
+>
+  <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+  <p>
+    Fig. 1
+  </p>
+</div>
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Styling is necessary to align the caption midth under the image.
+  </p>
+
+
+<p>
+  Used styles:
+  <samp>
+    div {
+      
+  text-align: center ;
+
+
+
+    }
+  </samp>
+</p>
+
+    </section>
+  
+  
+
+    </section>
+  
+    <section>
+     
+<h2
+  style="
+    border-bottom: thin solid ;
+    margin-top: 4em ;
+  "
+>
+  Image Series With Line Break
+</h2>
+     
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Too many images to fit in one row, so the browser will - like text - break into next line.
+  </p>
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Three images should suffice here to break the margin.
+  </p>
+
+
+
+    
+
+  
+  
+    <section>
+     
+<h3
+  style="
+    border-bottom: thin solid ;
+    margin-top: 3em ;
+  "
+>
+  With HTML <samp>figure</samp>
+</h3>
+     
+
+
+    
+
+  
+  <figure
+    style="
+      
+  float: left ;
+text-align: center ;
+
+
+
+    "
+  >
+    <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+    <figcaption>
+      Fig. 1
+    </figcaption>
+  </figure>
+
+  <figure
+    style="
+      
+  float: left ;
+text-align: center ;
+
+
+
+    "
+  >
+    <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+    <figcaption>
+      Fig. 2
+    </figcaption>
+  </figure>
+
+  <figure
+    style="
+      
+  float: left ;
+text-align: center ;
+
+
+
+    "
+  >
+    <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+    <figcaption>
+      Fig. 3
+    </figcaption>
+  </figure>
+
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Additional styling is necessary to overwrite standard <samp>figure</samp> block display, i.e. "one figure per line"
+  </p>
+
+
+<p
+  style="
+    clear: both ;
+  "
+>
+  Used styles:
+  <samp>
+    figure {
+      
+  float: left ;
+text-align: center ;
+
+
+
+    }
+  </samp>
+</p>
+
+    </section>
+  
+    <section>
+     
+<h3
+  style="
+    border-bottom: thin solid ;
+    margin-top: 3em ;
+  "
+>
+  With HTML <samp>div</samp>
+</h3>
+     
+
+
+    
+
+  
+  <div
+    style="
+      
+  float: left ;
+margin: 1em ;
+text-align: center ;
+
+
+
+    "
+  >
+    <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+    <figcaption>
+      Fig. 1
+    </figcaption>
+  </div>
+
+  <div
+    style="
+      
+  float: left ;
+margin: 1em ;
+text-align: center ;
+
+
+
+    "
+  >
+    <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+    <figcaption>
+      Fig. 2
+    </figcaption>
+  </div>
+
+  <div
+    style="
+      
+  float: left ;
+margin: 1em ;
+text-align: center ;
+
+
+
+    "
+  >
+    <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+    <figcaption>
+      Fig. 3
+    </figcaption>
+  </div>
+
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Additional styling is necessary to overwrite standard <samp>div</samp> block display and for spacing (whitespace) between the divs
+  </p>
+
+
+<p
+  style="
+    clear: both ;
+  "
+>
+  Used styles:
+  <samp>
+    div {
+      
+  float: left ;
+margin: 1em ;
+text-align: center ;
+
+
+
+    }
+  </samp>
+</p>
+
+    </section>
+  
+  
+
+    </section>
+  
+    <section>
+     
+<h2
+  style="
+    border-bottom: thin solid ;
+    margin-top: 4em ;
+  "
+>
+  Image Series Without Line Break
+</h2>
+     
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Images should be displayed in one line with horizontal scrolling.
+  </p>
+
+
+
+    
+
+  
+  
+    <section>
+     
+<h3
+  style="
+    border-bottom: thin solid ;
+    margin-top: 3em ;
+  "
+>
+  With HTML <samp>figure</samp>
+</h3>
+     
+
+
+    
+
+  <div
+  style="
+    overflow: auto ;
+  "
+>
+  
+    <figure
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 1
+      </figcaption>
+    </figure>
+  
+    <figure
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 2
+      </figcaption>
+    </figure>
+  
+    <figure
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 3
+      </figcaption>
+    </figure>
+  
+    <figure
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 4
+      </figcaption>
+    </figure>
+  
+    <figure
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 5
+      </figcaption>
+    </figure>
+  
+</div>
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Requires an encapsulating <samp>div</samp> that controls the <samp>overflow</samp>.
+  </p>
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Ordering in one horizontal line is now achieved with <samp>display: table-cell</samp>, for this a <samp>padding</samp> has to be defined (<samp>margin</samp> does not work for / between cells).
+  </p>
+
+
+<p
+  style="
+    clear: both ;
+  "
+>
+  Used styles:
+</p>
+<ul>
+  <li>
+    Outer <samp>div</samp>:
+    <samp>
+      overflow: auto ;
+    </samp>
+  </li>
+  <li>
+    <samp>figure</samp>s:
+    <samp>
+      
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+    </samp>
+  </li>
+</ul>
+
+
+    </section>
+  
+    <section>
+     
+<h3
+  style="
+    border-bottom: thin solid ;
+    margin-top: 3em ;
+  "
+>
+  With HTML <samp>div</samp>
+</h3>
+     
+
+
+    
+
+  <div
+  style="
+    overflow: auto ;
+  "
+>
+  
+    <div
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 1
+      </figcaption>
+    </div>
+  
+    <div
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 2
+      </figcaption>
+    </div>
+  
+    <div
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 3
+      </figcaption>
+    </div>
+  
+    <div
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 4
+      </figcaption>
+    </div>
+  
+    <div
+      style="
+        
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+      "
+    >
+      <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+      <figcaption>
+        Fig. 5
+      </figcaption>
+    </div>
+  
+</div>
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Requires an encapsulating <samp>div</samp> that controls the <samp>overflow</samp>.
+  </p>
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Ordering in one horizontal line is now achieved with <samp>display: table-cell</samp>, for this a <samp>padding</samp> has to be defined (<samp>margin</samp> does not work for / between cells).
+  </p>
+
+
+<p
+  style="
+    clear: both ;
+  "
+>
+  Used styles:
+</p>
+<ul>
+  <li>
+    Outer <samp>div</samp>:
+    <samp>
+      overflow: auto ;
+    </samp>
+  </li>
+  <li>
+    Image with caption <samp>div</samp>s:
+    <samp>
+      
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+    </samp>
+  </li>
+</ul>
+
+
+    </section>
+  
+  
+
+    </section>
+  
+    <section>
+     
+<h2
+  style="
+    border-bottom: thin solid ;
+    margin-top: 4em ;
+  "
+>
+  Multiple Image Series Without Line Break
+</h2>
+     
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Multiple parallel lines of images scrolling together horizontally.
+  </p>
+
+
+
+    
+
+  
+  
+    <section>
+     
+<h3
+  style="
+    border-bottom: thin solid ;
+    margin-top: 3em ;
+  "
+>
+  With HTML <samp>figure</samp>
+</h3>
+     
+
+
+    
+
+  <div
+  style="
+    overflow: auto ;
+  "
+>
+  <div>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 1a
+        </figcaption>
+      </figure>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 2a
+        </figcaption>
+      </figure>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 3a
+        </figcaption>
+      </figure>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 4a
+        </figcaption>
+      </figure>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 5a
+        </figcaption>
+      </figure>
+    
+  </div>
+  <div>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 1b
+        </figcaption>
+      </figure>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 2b
+        </figcaption>
+      </figure>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 3b
+        </figcaption>
+      </figure>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 4b
+        </figcaption>
+      </figure>
+    
+      <figure
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 5b
+        </figcaption>
+      </figure>
+    
+  </div>
+</div>
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Each row of images encapsulated in an own <samp>div</samp>, "controlled" by shared outer <samp>div</samp>.
+  </p>
+
+
+<p
+  style="
+    clear: both ;
+  "
+>
+  Used styles:
+</p>
+<ul>
+  <li>
+    Outer <samp>div</samp>:
+    <samp>
+      overflow: auto ;
+    </samp>
+  </li>
+  <li>
+    <samp>figure</samp>s:
+    <samp>
+      
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+    </samp>
+  </li>
+</ul>
+
+
+    </section>
+  
+    <section>
+     
+<h3
+  style="
+    border-bottom: thin solid ;
+    margin-top: 3em ;
+  "
+>
+  With HTML <samp>div</samp>
+</h3>
+     
+
+
+    
+
+  <div
+  style="
+    overflow: auto ;
+  "
+>
+  <div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 1a
+        </figcaption>
+      </div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 2a
+        </figcaption>
+      </div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 3a
+        </figcaption>
+      </div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 4a
+        </figcaption>
+      </div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 5a
+        </figcaption>
+      </div>
+    
+  </div>
+  <div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 1b
+        </figcaption>
+      </div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 2b
+        </figcaption>
+      </div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 3b
+        </figcaption>
+      </div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 4b
+        </figcaption>
+      </div>
+    
+      <div
+        style="
+          
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+        "
+      >
+        <img
+  alt="Test image"
+  src="images/image.jpeg"
+  title="Test image"
+>
+
+        <figcaption>
+          Fig. 5b
+        </figcaption>
+      </div>
+    
+  </div>
+</div>
+
+  <p
+    style="
+      clear: both ;
+    "
+  >
+    Each row of images encapsulated in an own <samp>div</samp>, "controlled" by shared outer <samp>div</samp>.
+  </p>
+
+
+<p
+  style="
+    clear: both ;
+  "
+>
+  Used styles:
+</p>
+<ul>
+  <li>
+    Outer <samp>div</samp>:
+    <samp>
+      overflow: auto ;
+    </samp>
+  </li>
+  <li>
+    Image with caption <samp>div</samp>s:
+    <samp>
+      
+  display: table-cell ;
+padding: 1em ;
+text-align: center ;
+
+
+
+    </samp>
+  </li>
+</ul>
+
+
+    </section>
+  
+  
+
+    </section>
+  
+  
+
+
+  </body>
+</html>
