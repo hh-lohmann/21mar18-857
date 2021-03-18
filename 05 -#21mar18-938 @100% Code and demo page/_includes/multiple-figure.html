@@ -1,0 +1,25 @@
+{% for i in (1..3) %}
+  <figure
+    style="
+      {% include enum-includes.html objSection = include.objSection strKey = "styles" %}
+    "
+  >
+    {% include img-element.html %}
+    <figcaption>
+      Fig. {{forloop.index}}
+    </figcaption>
+  </figure>
+{% endfor %}
+{% include enum-strings.html objSection = include.objSection strKey = "notes" %}
+<p
+  style="
+    clear: both ;
+  "
+>
+  Used styles:
+  <samp>
+    figure {
+      {% include enum-includes.html objSection = include.objSection strKey = "styles" %}
+    }
+  </samp>
+</p>

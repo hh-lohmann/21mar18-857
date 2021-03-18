@@ -1,0 +1,9 @@
+{% assign intTopMargin = 6 | minus: include.intLevel %}
+<h{{include.intLevel}}
+  style="
+    border-bottom: thin solid ;
+    margin-top: {{intTopMargin}}em ;
+  "
+>
+  {{include.objSection.title}}
+</h{{include.intLevel}}>

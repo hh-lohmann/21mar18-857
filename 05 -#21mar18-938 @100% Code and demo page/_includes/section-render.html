@@ -1,0 +1,14 @@
+{% assign intSections = include.objSection.sections | size %}
+{% if intSections > 0 %}
+  {% assign intLevel = include.intLevel | plus: 1 %}
+  {% for objSection in include.objSection.sections %}
+    <section>
+     {% include section-title.html intLevel = intLevel objSection = objSection %}
+     {% include section-description.html objSection = objSection %}
+    {% include section-render.html objSection = objSection intLevel = intLevel %}
+    </section>
+  {% endfor %}
+  {% assign intLevel = intLevel | minus: 1 %}
+{% else %}
+  {% include {{include.objSection.id}}.html objSection = include.objSection %}
+{% endif %}

@@ -1,0 +1,19 @@
+<figure
+  style="
+    {% include enum-includes.html objSection = include.objSection strKey = "styles" %}
+  "
+>
+  {% include img-element.html %}
+  <figcaption>
+    Fig. 1
+  </figcaption>
+</figure>
+{% include enum-strings.html objSection = include.objSection strKey = "notes" %}
+<p>
+  Used styles:
+  <samp>
+    figure {
+      {% include enum-includes.html objSection = include.objSection strKey = "styles" %}
+    }
+  </samp>
+</p>

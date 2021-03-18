@@ -1,0 +1,133 @@
+{
+  "test-image": {
+    "alt": "Test image" ,
+    "path": "images/image.jpeg"
+  } ,
+  "sections": [
+    { "id": "single-image-with-caption" ,
+      "title": "Single Image With Caption" ,
+      "description": [
+        "At first only one image to demonstrate the basic complex of image and caption"
+      ] ,
+      "sections": [
+        { "id": "single-figure" ,
+          "title": "With HTML <samp>figure</samp>" ,
+          "description": [
+            "<samp>figure</samp> would be straighforward since it semantically clear encapsulates an image with a caption (<samp>figcaption</samp>). Unfortunatly there were cases where it didn't work with <samp>overflow</samp> tweaking (see below)."
+          ], 
+          "styles": [
+            "single-figure-styles/figure.css"
+          ] ,
+          "notes": [
+            "Styling is necessary to align the caption midth under the image."
+          ]
+        } ,
+        { "id": "single-div" ,
+          "title": "With HTML <samp>div</samp>" ,
+          "description": [
+            "<samp>div</samp> is always suboptimal due to its lack of semantic and suits as a last resort only. With it there is also no semantically clear element for the image caption, the least complicated choice is <samp>p</samp> for containing a text block. Semantic roles should be expressed by classes (with class names that are not reflecting styling details)."
+          ],
+          "styles": [
+            "single-div-styles/div.css"
+          ] ,
+          "notes": [
+            "Styling is necessary to align the caption midth under the image."
+          ]
+        }
+      ]
+    } ,
+    { "id": "image-series-with-line-break" ,
+      "title": "Image Series With Line Break" ,
+      "description": [
+        "Too many images to fit in one row, so the browser will - like text - break into next line." ,
+        "Three images should suffice here to break the margin."
+      ] ,
+      "sections": [
+        { "id": "multiple-figure" ,
+          "title": "With HTML <samp>figure</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-figure-styles/figure.css"
+          ] ,
+          "notes": [
+            "Additional styling is necessary to overwrite standard <samp>figure</samp> block display, i.e. \"one figure per line\""
+          ]
+        } ,
+        { "id": "multiple-div" ,
+          "title": "With HTML <samp>div</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-div-styles/div.css"
+          ] ,
+          "notes": [
+            "Additional styling is necessary to overwrite standard <samp>div</samp> block display and for spacing (whitespace) between the divs"
+          ]
+        }
+      ]
+    } ,
+    { "id": "image-series-without-line-break" ,
+      "title": "Image Series Without Line Break" ,
+      "description": [
+        "Images should be displayed in one line with horizontal scrolling."
+      ] ,
+      "sections": [
+        { "id": "multiple-figure-nobr" ,
+          "title": "With HTML <samp>figure</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-figure-nobr-styles/figure.css"
+          ] ,
+          "notes": [
+            "Requires an encapsulating <samp>div</samp> that controls the <samp>overflow</samp>." ,
+            "Ordering in one horizontal line is now achieved with <samp>display: table-cell</samp>, for this a <samp>padding</samp> has to be defined (<samp>margin</samp> does not work for / between cells)."
+          ]
+        } ,
+        { "id": "multiple-div-nobr" ,
+          "title": "With HTML <samp>div</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-div-nobr-styles/div.css"
+          ] ,
+          "notes": [
+            "Requires an encapsulating <samp>div</samp> that controls the <samp>overflow</samp>." ,
+            "Ordering in one horizontal line is now achieved with <samp>display: table-cell</samp>, for this a <samp>padding</samp> has to be defined (<samp>margin</samp> does not work for / between cells)."
+          ]
+        }
+      ]
+    } ,
+    { "id": "multiple-image-series-without-line-break" ,
+      "title": "Multiple Image Series Without Line Break" ,
+      "description": [
+        "Multiple parallel lines of images scrolling together horizontally."
+      ] ,
+      "sections": [
+        { "id": "multiple-row-figure" ,
+          "title": "With HTML <samp>figure</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-figure-nobr-styles/figure.css"
+          ] ,
+          "notes": [
+            "Each row of images encapsulated in an own <samp>div</samp>, \"controlled\" by shared outer <samp>div</samp>."
+          ]
+        } ,
+        { "id": "multiple-row-div" ,
+          "title": "With HTML <samp>div</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-div-nobr-styles/div.css"
+          ] ,
+          "notes": [
+            "Each row of images encapsulated in an own <samp>div</samp>, \"controlled\" by shared outer <samp>div</samp>."
+          ]
+        }
+      ]
+    }
+  ]
+}
