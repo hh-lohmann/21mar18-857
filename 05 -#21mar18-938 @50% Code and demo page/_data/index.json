@@ -13,7 +13,7 @@
         { "id": "single-figure" ,
           "title": "With HTML <samp>figure</samp>" ,
           "description": [
-            "<samp>figure</samp> would be straighforward since it semantically clear encapsulates an image with a caption (<samp>figcaption</samp>). Unfortunatly it does not fit for <samp>overflow</samp> tweaking (see below)."
+            "<samp>figure</samp> would be straighforward since it semantically clear encapsulates an image with a caption (<samp>figcaption</samp>). Unfortunatly there were cases where it didn't work with <samp>overflow</samp> tweaking (see below)."
           ], 
           "styles": [
             "single-figure-styles/figure.css"
