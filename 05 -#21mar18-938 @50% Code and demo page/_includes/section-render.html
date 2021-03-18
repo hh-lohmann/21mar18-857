@@ -10,5 +10,5 @@
   {% endfor %}
   {% assign intLevel = intLevel | minus: 1 %}
 {% else %}
-  {% include {{objSection.id}}.html %}
+  {% include {{include.objSection.id}}.html objSection = include.objSection %}
 {% endif %}

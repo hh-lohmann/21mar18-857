@@ -14,12 +14,24 @@
           "title": "With HTML <samp>figure</samp>" ,
           "description": [
             "<samp>figure</samp> would be straighforward since it semantically clear encapsulates an image with a caption (<samp>figcaption</samp>). Unfortunatly it does not fit for <samp>overflow</samp> tweaking (see below)."
+          ], 
+          "styles": [
+            "single-figure-styles/figure.css"
+          ] ,
+          "notes": [
+            "Styling is necessary to align the caption midth under the image."
           ]
         } ,
         { "id": "single-div" ,
           "title": "With HTML <samp>div</samp>" ,
           "description": [
             "<samp>div</samp> is always suboptimal due to its lack of semantic and suits as a last resort only. With it there is also no semantically clear element for the image caption, the least complicated choice is <samp>p</samp> for containing a text block. Semantic roles should be expressed by classes (with class names that are not reflecting styling details)."
+          ],
+          "styles": [
+            "single-div-styles/div.css"
+          ] ,
+          "notes": [
+            "Styling is necessary to align the caption midth under the image."
           ]
         }
       ]
@@ -27,8 +39,32 @@
     { "id": "image-series-with-line-break" ,
       "title": "Image Series With Line Break" ,
       "description": [
+        "Too many images to fit in one row, so the browser will - like text - break into next line." ,
+        "Three images should suffice here to break the margin."
       ] ,
       "sections": [
+        { "id": "multiple-figure" ,
+          "title": "With HTML <samp>figure</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-figure-styles/figure.css"
+          ] ,
+          "notes": [
+            "Additional styling is necessary to overwrite standard <samp>figure</samp> block display, i.e. \"one figure per line\""
+          ]
+        } ,
+        { "id": "multiple-div" ,
+          "title": "With HTML <samp>div</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-div-styles/div.css"
+          ] ,
+          "notes": [
+            "Additional styling is necessary to overwrite standard <samp>div</samp> block display and for spacing (whitespace) between the divs"
+          ]
+        }
       ]
     }
   ]

@@ -1,5 +1,1 @@
-{% for str in include.objSection.description %}
-  <p>
-    {{str}}
-  </p>
-{% endfor %}
+{% include enum-strings.html objSection = include.objSection strKey = "description" %}

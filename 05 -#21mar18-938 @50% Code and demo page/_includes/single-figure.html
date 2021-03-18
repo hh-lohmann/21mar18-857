@@ -1,6 +1,6 @@
 <figure
   style="
-    {% include single-figure-styles/figure.css %}
+    {% include enum-includes.html objSection = include.objSection strKey = "styles" %}
   "
 >
   {% include img-element.html %}
@@ -8,14 +8,12 @@
     Fig. 1
   </figcaption>
 </figure>
-<p>
-  Styling is necessary to align the caption midth under the image.
-</p>
+{% include enum-strings.html objSection = include.objSection strKey = "notes" %}
 <p>
   Used styles:
   <samp>
     figure {
-      {% include single-figure-styles/figure.css %}
+      {% include enum-includes.html objSection = include.objSection strKey = "styles" %}
     }
   </samp>
 </p>
