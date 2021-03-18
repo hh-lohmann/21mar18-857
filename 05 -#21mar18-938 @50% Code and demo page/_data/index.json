@@ -98,6 +98,36 @@
           ]
         }
       ]
+    } ,
+    { "id": "multiple-image-series-without-line-break" ,
+      "title": "Multiple Image Series Without Line Break" ,
+      "description": [
+        "Multiple parallel lines of images scrolling together horizontally."
+      ] ,
+      "sections": [
+        { "id": "multiple-row-figure" ,
+          "title": "With HTML <samp>figure</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-figure-nobr-styles/figure.css"
+          ] ,
+          "notes": [
+            "Each row of images encapsulated in an own <samp>div</samp>, \"controlled\" by shared outer <samp>div</samp>."
+          ]
+        } ,
+        { "id": "multiple-row-div" ,
+          "title": "With HTML <samp>div</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-div-nobr-styles/div.css"
+          ] ,
+          "notes": [
+            "Each row of images encapsulated in an own <samp>div</samp>, \"controlled\" by shared outer <samp>div</samp>."
+          ]
+        }
+      ]
     }
   ]
 }
