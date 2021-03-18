@@ -1,0 +1,40 @@
+<div
+  style="
+    overflow: auto ;
+  "
+>
+  {% for i in (1..5) %}
+    <figure
+      style="
+        {% include enum-includes.html objSection = include.objSection strKey = "styles" %}
+      "
+    >
+      {% include img-element.html %}
+      <figcaption>
+        Fig. {{forloop.index}}
+      </figcaption>
+    </figure>
+  {% endfor %}
+</div>
+{% include enum-strings.html objSection = include.objSection strKey = "notes" %}
+<p
+  style="
+    clear: both ;
+  "
+>
+  Used styles:
+</p>
+<ul>
+  <li>
+    Outer <samp>div</samp>:
+    <samp>
+      overflow: auto ;
+    </samp>
+  </li>
+  <li>
+    <samp>figure</samp>s:
+    <samp>
+      {% include enum-includes.html objSection = include.objSection strKey = "styles" %}
+    </samp>
+  </li>
+</ul>

@@ -66,6 +66,38 @@
           ]
         }
       ]
+    } ,
+    { "id": "image-series-without-line-break" ,
+      "title": "Image Series Without Line Break" ,
+      "description": [
+        "Images should be displayed in one line with horizontal scrolling."
+      ] ,
+      "sections": [
+        { "id": "multiple-figure-nobr" ,
+          "title": "With HTML <samp>figure</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-figure-nobr-styles/figure.css"
+          ] ,
+          "notes": [
+            "Requires an encapsulating <samp>div</samp> that controls the <samp>overflow</samp>." ,
+            "Ordering in one horizontal line is now achieved with <samp>display: table-cell</samp>, for this a <samp>padding</samp> has to be defined (<samp>margin</samp> does not work for / between cells)."
+          ]
+        } ,
+        { "id": "multiple-div-nobr" ,
+          "title": "With HTML <samp>div</samp>" ,
+          "description": [
+          ] ,
+          "styles": [
+            "multiple-div-nobr-styles/div.css"
+          ] ,
+          "notes": [
+            "Requires an encapsulating <samp>div</samp> that controls the <samp>overflow</samp>." ,
+            "Ordering in one horizontal line is now achieved with <samp>display: table-cell</samp>, for this a <samp>padding</samp> has to be defined (<samp>margin</samp> does not work for / between cells)."
+          ]
+        }
+      ]
     }
   ]
 }
