@@ -1,0 +1,35 @@
+{
+  "test-image": {
+    "alt": "Test image" ,
+    "path": "images/image.jpeg"
+  } ,
+  "sections": [
+    { "id": "single-image-with-caption" ,
+      "title": "Single Image With Caption" ,
+      "description": [
+        "At first only one image to demonstrate the basic complex of image and caption"
+      ] ,
+      "sections": [
+        { "id": "single-figure" ,
+          "title": "With HTML <samp>figure</samp>" ,
+          "description": [
+            "<samp>figure</samp> would be straighforward since it semantically clear encapsulates an image with a caption (<samp>figcaption</samp>). Unfortunatly it does not fit for <samp>overflow</samp> tweaking (see below)."
+          ]
+        } ,
+        { "id": "single-div" ,
+          "title": "With HTML <samp>div</samp>" ,
+          "description": [
+            "<samp>div</samp> is always suboptimal due to its lack of semantic and suits as a last resort only. With it there is also no semantically clear element for the image caption, the least complicated choice is <samp>p</samp> for containing a text block. Semantic roles should be expressed by classes (with class names that are not reflecting styling details)."
+          ]
+        }
+      ]
+    } ,
+    { "id": "image-series-with-line-break" ,
+      "title": "Image Series With Line Break" ,
+      "description": [
+      ] ,
+      "sections": [
+      ]
+    }
+  ]
+}
