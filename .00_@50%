@@ -1,5 +1,8 @@
 - @50% +#21mar19-1319 U Reset Jekyll usage for GitHub pages
-  - -#21mar19-1320 i GitHub pages ignore "Source" setting
+  - -#21mar19-1329 U Move "_*" directories from "05 ..." to repo root
+  - -#21mar19-1331 U Move "image" directory from "05 ..." to new dir "Jekyll-assests" at repo root
+    - -#21mar19-1332 i "Jekyll-assests" to inform directly about reason of its presence
+  - -#21mar19-1320 i GitHub pages ignore "Source" setting / Source is always repo top level
     - -#21mar19-1320 i see https://docs.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#configuring-jekyll-in-your-github-pages-site
 - @50% +#21mar19-1318 U Four images for "multiple" test cases 
   - -#21mar19-1321 i I.e. not 3 & 5 but 4 each
