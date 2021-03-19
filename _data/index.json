@@ -1,7 +1,7 @@
 {
   "test-image": {
     "alt": "Test image" ,
-    "path": "images/image.jpeg"
+    "path": "Jekyll-assets/images/image.jpeg"
   } ,
   "sections": [
     { "id": "single-image-with-caption" ,
